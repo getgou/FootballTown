@@ -1,0 +1,17 @@
+before_install:
+- cd FootballTownApp
+- gem install cocoapods
+
+language: node_js
+node_js:
+- '6'
+install:
+- npm install
+- cd ios/
+- pod update
+- cd ..
+script:
+- npm test
+
+notifications:
+  slack: agiledevworkspace:NnLPgZeqZmeMLZv35VWUFpWYs
